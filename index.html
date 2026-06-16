@@ -81,6 +81,7 @@ a:hover{text-decoration:underline}
 .tier-tab.active[data-tier="Inner Mastermind"]{background:var(--gold);color:#0a0e1a}
 .tier-tab.active[data-tier="Extended Mastermind"]{background:var(--blue);color:#0a0e1a}
 .tier-tab.active[data-tier="Operational"]{background:var(--green);color:#0a0e1a}
+.tier-tab.active[data-tier="Wisdom Council"]{background:#a78bfa;color:#0a0e1a}
 
 /* SUBFILTER */
 .subfilter{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px;align-items:center}
@@ -139,6 +140,7 @@ a:hover{text-decoration:underline}
 .modal-tierbadge.t1{background:var(--green-bg);color:var(--green);border-color:rgba(52,211,153,0.4)}
 .modal-tierbadge.t2{background:rgba(212,160,60,0.12);color:var(--gold);border-color:rgba(212,160,60,0.4)}
 .modal-tierbadge.t3{background:rgba(96,165,250,0.12);color:var(--blue);border-color:rgba(96,165,250,0.4)}
+.modal-tierbadge.t4{background:rgba(167,139,250,0.12);color:#a78bfa;border-color:rgba(167,139,250,0.4)}
 .modal-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .tool-btn{display:inline-flex;align-items:center;gap:7px;background:var(--bg-card);border:1px solid var(--border);color:var(--text-primary);padding:8px 15px;border-radius:var(--radius-md);cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:all var(--transition)}
 .tool-btn:hover{border-color:var(--gold);color:var(--gold-light);background:var(--bg-card-hover)}
@@ -229,15 +231,15 @@ mark{background:rgba(212,160,60,0.35);color:inherit;border-radius:2px}
 
 <header class="hero">
   <div class="container">
-    <div class="hero-eyebrow">Poseidon Intelligence · Three-Tier Council</div>
-    <h1>84 Agents<span class="dot">.</span> Three Tiers<span class="dot">.</span> One Mastermind<span class="dot">.</span></h1>
+    <div class="hero-eyebrow">Poseidon Intelligence · Four-Tier Council</div>
+    <h1>84 Agents<span class="dot">.</span> Four Tiers<span class="dot">.</span> One Mastermind<span class="dot">.</span></h1>
     <p class="hero-sub">A unified portal across the CTI Mastermind Vault — Operational agents who execute, an Inner Mastermind that advises, and an Extended Mastermind of timeless minds. Search, explore, and export any dossier as PDF or Markdown.</p>
     <div class="stats-strip">
-      <div class="stat"><div class="stat-value all">59</div><div class="stat-label">Total Agents</div></div>
-      <div class="stat"><div class="stat-value t1">34</div><div class="stat-label">Operational</div></div>
+      <div class="stat"><div class="stat-value all">84</div><div class="stat-label">Total Agents</div></div>
+      <div class="stat"><div class="stat-value t1">41</div><div class="stat-label">Operational</div></div>
       <div class="stat"><div class="stat-value t2">9</div><div class="stat-label">Inner Mastermind</div></div>
       <div class="stat"><div class="stat-value t3">16</div><div class="stat-label">Extended Mastermind</div></div>
-      <div class="stat"><div class="stat-value all">9</div><div class="stat-label">Departments</div></div>
+      <div class="stat"><div class="stat-value t4" style="color:#a78bfa">18</div><div class="stat-label">Wisdom Council</div></div>
     </div>
   </div>
 </header>
@@ -245,10 +247,11 @@ mark{background:rgba(212,160,60,0.35);color:inherit;border-radius:2px}
 <main class="section">
   <div class="container">
     <div class="tier-tabs" id="tierTabs">
-      <button class="tier-tab active" data-tier="all" onclick="setTier('all')">All <span class="cnt">59</span></button>
+      <button class="tier-tab active" data-tier="all" onclick="setTier('all')">All <span class="cnt">84</span></button>
+      <button class="tier-tab" data-tier="Operational" onclick="setTier('Operational')">Operational <span class="cnt">41</span></button>
       <button class="tier-tab" data-tier="Inner Mastermind" onclick="setTier('Inner Mastermind')">Inner Mastermind <span class="cnt">9</span></button>
       <button class="tier-tab" data-tier="Extended Mastermind" onclick="setTier('Extended Mastermind')">Extended <span class="cnt">16</span></button>
-      <button class="tier-tab" data-tier="Operational" onclick="setTier('Operational')">Operational <span class="cnt">34</span></button>
+      <button class="tier-tab" data-tier="Wisdom Council" onclick="setTier('Wisdom Council')">Wisdom Council <span class="cnt">18</span></button>
     </div>
     <div class="subfilter" id="subfilter"></div>
     <div class="grid" id="grid"></div>
